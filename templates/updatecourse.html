@@ -1,0 +1,26 @@
+{% extends 'adminnavbar.html' %}
+
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  <table align="center">
+    <tr>
+        <td>CourseName:</td>
+      <td><input type="text" name="txtCname" value="{{ data.course_name }}"></td>
+    </tr>
+    <tr>
+      <td>CourseDuration:</td>
+      <td><input type="text" name="txtCDuration" value="{{ data.course_duration }}"></td>
+    </tr>
+    <tr>
+      <td>CourseFee:</td>
+      <td><input type="number" name="txtCFee" value="{{ data.course_fees }}"></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2"><input type="submit" value="AddCourse" name="btnsub"></td>
+    </tr>
+
+  </table>
+</form>
+
+{% endblock %}

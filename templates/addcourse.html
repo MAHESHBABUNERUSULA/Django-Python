@@ -1,0 +1,27 @@
+{% extends 'adminnavbar.html' %}
+
+{% block content %}
+<h3 align="center" style="color:green">{{ msg }}</h3>
+<h1 align="center">Add Course Details</h1>
+<form action="add_course" method="post">
+  {% csrf_token %}
+  <table align="center">
+    <tr>
+        <td>CourseName:</td>
+      <td><input type="text" name="txtCname"></td>
+    </tr>
+    <tr>
+      <td>CourseDuration:</td>
+      <td><input type="text" name="txtCDuration"></td>
+    </tr>
+    <tr>
+      <td>CourseFee:</td>
+      <td><input type="number" name="txtCFee"></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2"><input type="submit" value="AddCourse" name="btnsub"></td>
+    </tr>
+
+  </table>
+</form>
+{% endblock %}
